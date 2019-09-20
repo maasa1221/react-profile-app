@@ -2,7 +2,9 @@ import React from 'react';
 import LoginScreen from './screens/LoginScreen';
 import SignupScreen from './screens/SignupScreen';
 import ListScreen from './screens/ListScreen';
-
+import DetailScreen from './screens/DetailScreen';
+import EditScreen from './screens/EditScreen';
+import CreateScreen from './screens/CreateScreen';
 import {createStore,applyMiddleware} from 'redux'
 import reducer from './reducers';
 import {Provider} from 'react-redux';
@@ -21,7 +23,9 @@ const AppNavigator = () =>(
       <Route exact path="/" component = {LoginScreen}/>
       <Route path="/signup" component = {SignupScreen}/>
       <Route path="/home" component = {ListScreen}/>
-      
+      <Route path='/detail/:id' component = {DetailScreen}/>
+      <Route path='/edit/:id' component = {EditScreen}/>
+      <Route path='/create' component = {CreateScreen}/>
     </div>
   </Router>
 )
