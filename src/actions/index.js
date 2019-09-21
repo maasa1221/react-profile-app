@@ -36,16 +36,16 @@ export function mapDispatchToProps(dispatch) {
 
     postPhoto: (photo) => {
       AWS.config.update({
-        region: "ap-northeast-1", // Put your aws region here
-        accessKeyId: "AKIAIZYFR6T5ZIXATAXQ",
-        secretAccessKey:"q01fCprpIzmyLw/NxUWN7RO/gGAe0yBcKfRBqRYx",
+        region: "", // Put your aws region here
+        accessKeyId: "",
+        secretAccessKey:"",
       })
       const options = {
-        Bucket: "sapeetapp",
-            Key: `uploads/${photo.name}`,
-            ContentType: photo.type,
-            Body: photo.uri,
-            ACL: "public-read",
+        Bucket: "",
+            Key: "",
+            ContentType: "",
+            Body: "",
+            ACL: "",
       }
       console.log(photo)
       var s3 = new AWS.S3();
